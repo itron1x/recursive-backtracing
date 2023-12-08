@@ -61,13 +61,14 @@ public class Generator_v2 {
     }
 
     public void printMaze(int[][] gameBoard) {
+        System.out.println();
         char space = (char) 32;
         char raute = (char) 217;
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - 1; j++) {
                 if (gameBoard[i][j] == 0) {
-                    System.out.printf("%2s", space);
-                } else System.out.printf("%2s", raute);
+                    System.out.printf("\u001B[36m %2s", space);
+                } else System.out.printf("\u001B[36m %2s", raute);
             }
             System.out.println();
         }
